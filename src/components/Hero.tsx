@@ -39,13 +39,13 @@ const Hero = () => {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
       {/* Logo in top-left corner for desktop, centered for mobile */}
-      <div className="absolute top-8 left-8 z-25 hidden md:block">
+      <div className="absolute top-8 left-8 z-30 hidden md:block">
         <img src="/logo1.png" alt="CleanPro Logo" className="h-45 w-auto" />
       </div>
 
       {/* Mobile Logo */}
-      <div className="absolute top-0 left-0 right-0 pt-6 z-20 md:hidden">
-        <img src="/logo1.png" alt="CleanPro Logo" className="h-80 w-auto mx-auto" />
+      <div className="absolute top-0 left-0 right-0 pt-4 z-20 md:hidden">
+        <img src="/logo1.png" alt="CleanPro Logo" className="h-72 w-auto mx-auto" />
       </div>
 
       {/* Background Slider */}
@@ -71,7 +71,7 @@ const Hero = () => {
       </div>
       
       {/* Content - Default centered for desktop, pushed down for mobile */}
-      <div className="container mx-auto px-4 z-10 text-white text-center md:transform-none md:mt-0 transform translate-y-20">
+      <div className="container mx-auto px-4 z-10 text-white text-center md:transform-none md:mt-0 transform translate-y-80">
         <div className="max-w-3xl mx-auto">
           <h1 
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
