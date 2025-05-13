@@ -77,41 +77,41 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-semibold text-blue-600 mb-4">Nos Services</h2>
-          <p className="text-gray-700 max-w-3xl mx-auto">
+    <section id="services" className="py-12 md:py-16 lg:py-20 bg-white">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-blue-600 mb-3 md:mb-4">Nos Services</h2>
+          <p className="text-gray-700 max-w-3xl mx-auto text-sm sm:text-base">
             Solutions de nettoyage professionnelles conçues pour dépasser vos attentes
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6 mb-10 md:mb-16">
           {serviceCards.map((service) => (
             <div key={service.id} className="bg-gray-50 rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-2">
               <div className="p-1">
-                <div className="aspect-w-16 aspect-h-9 mb-4">
+                <div className="aspect-w-16 aspect-h-9 mb-3 sm:mb-4">
                   <div className="w-full h-full bg-gray-200 flex items-center justify-center">
                     {service.icon === 'home' && (
-                      <span className="text-blue-600 text-4xl">🏠</span>
+                      <span className="text-blue-600 text-3xl sm:text-4xl">🏠</span>
                     )}
                     {service.icon === 'building' && (
-                      <span className="text-blue-600 text-4xl">🏢</span>
+                      <span className="text-blue-600 text-3xl sm:text-4xl">🏢</span>
                     )}
                     {service.icon === 'sparkles' && (
-                      <span className="text-blue-600 text-4xl">✨</span>
+                      <span className="text-blue-600 text-3xl sm:text-4xl">✨</span>
                     )}
                     {service.icon === 'hard-hat' && (
-                      <span className="text-blue-600 text-4xl">🚧</span>
+                      <span className="text-blue-600 text-3xl sm:text-4xl">🚧</span>
                     )}
                   </div>
                 </div>
-                <div className="p-5">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">{service.title}</h3>
-                  <p className="text-gray-600 mb-4 text-sm">{service.description}</p>
-                  <ul className="space-y-2">
+                <div className="p-3 sm:p-4 md:p-5">
+                  <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-2">{service.title}</h3>
+                  <p className="text-gray-600 mb-3 md:mb-4 text-xs sm:text-sm">{service.description}</p>
+                  <ul className="space-y-1 sm:space-y-2">
                     {service.features.map((feature, index) => (
-                      <li key={index} className="flex items-center text-sm">
+                      <li key={index} className="flex items-center text-xs sm:text-sm">
                         <span className="text-blue-600 mr-2">✓</span>
                         {feature}
                       </li>
@@ -123,16 +123,16 @@ const Services = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6 mb-8 md:mb-12">
           {benefits.map((benefit) => (
-            <div key={benefit.id} className="bg-gray-50 rounded-lg p-6 border border-gray-200">
-              <div className="flex items-center justify-center mb-4">
-                <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
+            <div key={benefit.id} className="bg-gray-50 rounded-lg p-4 sm:p-6 border border-gray-200">
+              <div className="flex items-center justify-center mb-3 md:mb-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-blue-100 flex items-center justify-center">
                   {benefit.icon}
                 </div>
               </div>
-              <h3 className="text-xl font-semibold text-center text-gray-800 mb-2">{benefit.title}</h3>
-              <p className="text-gray-600 text-center">{benefit.description}</p>
+              <h3 className="text-lg sm:text-xl font-semibold text-center text-gray-800 mb-1 sm:mb-2">{benefit.title}</h3>
+              <p className="text-gray-600 text-center text-xs sm:text-sm">{benefit.description}</p>
             </div>
           ))}
         </div>
@@ -140,7 +140,7 @@ const Services = () => {
         <div className="text-center">
           <a
             href="#contact"
-            className="inline-block px-8 py-3 bg-blue-600 text-white font-medium rounded-full shadow-md hover:bg-blue-700 transition-all duration-300 transform hover:scale-105"
+            className="inline-block px-6 sm:px-8 py-2 sm:py-3 bg-blue-600 text-white font-medium text-sm sm:text-base rounded-full shadow-md hover:bg-blue-700 transition-all duration-300 transform hover:scale-105"
           >
             Demander un Service
           </a>
