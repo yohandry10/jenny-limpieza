@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Preloader from './components/Preloader';
 import BackToTop from './components/BackToTop';
+import WhatsAppButton from './components/WhatsAppButton';
 import { LanguageProvider } from './contexts/LanguageContext';
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
             </main>
             <Footer />
             <BackToTop />
+            <WhatsAppButton />
           </>
         )}
       </div>

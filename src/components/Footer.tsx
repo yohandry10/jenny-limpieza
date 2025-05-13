@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
+import { Instagram } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Footer = () => {
@@ -17,17 +17,8 @@ const Footer = () => {
               Professional cleaning services with trained personnel and eco-friendly products.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="bg-blue-800 p-2 rounded-full hover:bg-blue-700 transition-colors">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="bg-blue-800 p-2 rounded-full hover:bg-blue-700 transition-colors">
+              <a href="https://www.instagram.com/inkaperu024?igsh=MTZqd2hrcW91cWdoag%3D%3D" target="_blank" rel="noopener noreferrer" className="bg-blue-800 p-2 rounded-full hover:bg-blue-700 transition-colors">
                 <Instagram size={20} />
-              </a>
-              <a href="#" className="bg-blue-800 p-2 rounded-full hover:bg-blue-700 transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="bg-blue-800 p-2 rounded-full hover:bg-blue-700 transition-colors">
-                <Linkedin size={20} />
               </a>
             </div>
           </div>
@@ -92,7 +83,7 @@ const Footer = () => {
             <address className="not-italic text-blue-200">
               <p className="mb-2">{t('contact.location')}</p>
               <p className="mb-2">+1 (438) 870-9696</p>
-              <p>entretienmenager.jy@gmail.com</p>
+              <p>inka_express024@hotmail.com</p>
             </address>
           </div>
         </div>
