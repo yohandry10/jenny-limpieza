@@ -15,9 +15,11 @@ const translations = {
   fr: {
     'nav.home': 'Accueil',
     'nav.services': 'Services',
+    'nav.gallery': 'Galerie',
     'nav.testimonials': 'Témoignages',
     'nav.contact': 'Contact',
     'nav.callNow': 'Appelez Maintenant',
+    'nav.language': 'Langue',
     
     'hero.title': 'Solutions de nettoyage personnalisées pour maisons et entreprises',
     'hero.subtitle': 'Nous sommes une entreprise dédiée à fournir des services de nettoyage de haute qualité avec du personnel qualifié et des produits écologiques.',
@@ -146,13 +148,23 @@ const translations = {
     'preloader.welcome': 'Bienvenue !',
 
     'backToTop.label': 'Retour en haut',
+    
+    'gallery.title': 'Galerie',
+    'gallery.subtitle': 'Découvrez nos travaux et la qualité de nos services de nettoyage',
+    'gallery.all': 'Tous',
+    'gallery.images': 'Images',
+    'gallery.videos': 'Vidéos',
+    'gallery.viewImage': 'Voir l\'image',
+    'gallery.playVideo': 'Lire la vidéo',
   },
   en: {
     'nav.home': 'Home',
     'nav.services': 'Services',
+    'nav.gallery': 'Gallery',
     'nav.testimonials': 'Testimonials',
     'nav.contact': 'Contact',
     'nav.callNow': 'Call Now',
+    'nav.language': 'Language',
     
     'hero.title': 'Custom cleaning solutions for homes and businesses',
     'hero.subtitle': 'We are a company dedicated to providing high-quality cleaning services with trained personnel and ecological products.',
@@ -281,6 +293,14 @@ const translations = {
     'preloader.welcome': 'Welcome!',
 
     'backToTop.label': 'Back to top',
+    
+    'gallery.title': 'Gallery',
+    'gallery.subtitle': 'Discover our work and the quality of our cleaning services',
+    'gallery.all': 'All',
+    'gallery.images': 'Images',
+    'gallery.videos': 'Videos',
+    'gallery.viewImage': 'View image',
+    'gallery.playVideo': 'Play video',
   }
 };
 

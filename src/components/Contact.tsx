@@ -65,7 +65,7 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
           {/* Contact Form */}
           <div 
-            ref={formRef}
+            ref={formRef as React.RefObject<HTMLDivElement>}
             className={`bg-white rounded-xl shadow-xl p-5 sm:p-6 md:p-8 transition-all duration-700 ${
               formVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
             }`}
@@ -183,7 +183,7 @@ const Contact = () => {
           
           {/* Contact Information */}
           <div 
-            ref={infoRef}
+            ref={infoRef as React.RefObject<HTMLDivElement>}
             className={`transition-all duration-700 delay-300 ${
               infoVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
             }`}
@@ -194,7 +194,7 @@ const Contact = () => {
               <div className="space-y-4 sm:space-y-6">
                 <div className="flex items-start gap-3 sm:gap-4">
                   <div className="bg-blue-500/50 p-2 sm:p-3 rounded-full shrink-0">
-                    <MapPin size={18} className="text-white" />
+                    <MapPin size={16} className="sm:w-[18px] sm:h-[18px] text-white" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-white/90 mb-1 text-sm sm:text-base">{t('contact.info.location')}</h4>
@@ -204,7 +204,7 @@ const Contact = () => {
                 
                 <div className="flex items-start gap-3 sm:gap-4">
                   <div className="bg-blue-500/50 p-2 sm:p-3 rounded-full shrink-0">
-                    <Phone size={18} className="text-white" />
+                    <Phone size={16} className="sm:w-[18px] sm:h-[18px] text-white" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-white/90 mb-1 text-sm sm:text-base">{t('contact.info.phone')}</h4>
@@ -214,7 +214,7 @@ const Contact = () => {
                 
                 <div className="flex items-start gap-3 sm:gap-4">
                   <div className="bg-blue-500/50 p-2 sm:p-3 rounded-full shrink-0">
-                    <Mail size={18} className="text-white" />
+                    <Mail size={16} className="sm:w-[18px] sm:h-[18px] text-white" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-white/90 mb-1 text-sm sm:text-base">{t('contact.info.email')}</h4>
@@ -224,7 +224,7 @@ const Contact = () => {
                 
                 <div className="flex items-start gap-3 sm:gap-4">
                   <div className="bg-blue-500/50 p-2 sm:p-3 rounded-full shrink-0">
-                    <Clock size={18} className="text-white" />
+                    <Clock size={16} className="sm:w-[18px] sm:h-[18px] text-white" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-white/90 mb-1 text-sm sm:text-base">{t('contact.hours')}</h4>

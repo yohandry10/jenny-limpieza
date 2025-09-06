@@ -1,6 +1,6 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
-import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Quote, Star, MessageSquare } from 'lucide-react';
 import useScrollReveal from '../hooks/useScrollReveal';
 
 interface Testimonial {
@@ -56,55 +56,57 @@ const Testimonials = () => {
   return (
     <section 
       id="testimonials" 
-      className="py-20 bg-gradient-to-br from-blue-900 to-blue-800 relative overflow-hidden"
+      className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-blue-50 to-gray-50 relative overflow-hidden"
       ref={sectionRef}
     >
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div 
-          className="absolute inset-0" 
-          style={{ 
-            backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
-            backgroundSize: "80px"
-          }}
-        ></div>
+        <div className="absolute top-0 left-0 right-0 h-40 bg-blue-500" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 80%)' }}></div>
+        <div className="absolute bottom-0 left-0 right-0 h-40 bg-blue-500" style={{ clipPath: 'polygon(0 20%, 100% 0, 100% 100%, 0 100%)' }}></div>
       </div>
       
       <div 
-        className={`container mx-auto px-4 relative z-10 transition-all duration-1000 ${
+        className={`container mx-auto px-3 sm:px-4 md:px-6 lg:px-4 relative z-10 transition-all duration-1000 ${
           sectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
-        <div className="max-w-2xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <div className="max-w-xl sm:max-w-2xl mx-auto text-center mb-8 sm:mb-12 md:mb-16 px-2 sm:px-0">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-blue-800 mb-3 sm:mb-4">
             {t('testimonials.title')}
           </h2>
-          <p className="text-blue-200 text-lg">
+          <p className="text-sm sm:text-base md:text-lg text-gray-600">
             {t('testimonials.subtitle')}
           </p>
+          <div className="w-16 sm:w-20 md:w-24 h-1 bg-blue-500 mx-auto mt-3 sm:mt-4 rounded-full"></div>
         </div>
 
         <div className="max-w-4xl mx-auto relative">
-          <div className="relative flex justify-center mb-10">
-            <Quote className="absolute text-cyan-500 w-16 h-16 opacity-30 top-0 -left-4" />
-            
-            <div className="p-8 bg-white/10 backdrop-blur-md rounded-xl shadow-2xl">
-              <p className="text-white/90 text-lg text-center">
+          <div className="relative flex justify-center mb-6 sm:mb-8 md:mb-10">
+            <div className="max-w-4xl mx-auto bg-white rounded-lg sm:rounded-xl shadow-xl p-4 sm:p-6 md:p-8 relative border-t-4 border-blue-500 transition-all duration-300 hover:shadow-2xl">
+              <div className="absolute top-2 sm:top-3 md:top-4 left-2 sm:left-3 md:left-4 text-blue-500 bg-blue-50 p-1.5 sm:p-2 rounded-full">
+                <Quote size={20} className="sm:w-6 sm:h-6 md:w-8 md:h-8 animate-pulse" />
+              </div>
+              <div className="absolute top-2 sm:top-3 md:top-4 right-2 sm:right-3 md:right-4 flex items-center space-x-0.5 sm:space-x-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={12} className="sm:w-4 sm:h-4 text-yellow-400 fill-yellow-400" />
+                ))}
+              </div>
+              <p className="text-gray-700 text-sm sm:text-base md:text-lg text-center mt-6 sm:mt-7 md:mt-8 px-2 sm:px-4 leading-relaxed">
                 "{testimonials[activeIndex].content}"
               </p>
             </div>
           </div>
           
-          <div className="flex items-center justify-center gap-4">
+          <div className="flex items-center justify-center gap-2 sm:gap-3 md:gap-4">
             <button
               onClick={handlePrev}
-              className="p-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
+              className="p-2 sm:p-2.5 md:p-3 rounded-full bg-white hover:bg-blue-100 hover:text-blue-600 transition-all duration-300 shadow-md hover:shadow-lg"
               aria-label="Previous testimonial"
             >
-              <ChevronLeft size={24} />
+              <ChevronLeft size={18} className="sm:w-5 sm:h-5 md:w-6 md:h-6 transform transition-transform hover:scale-110" />
             </button>
             
-            <div className="flex -space-x-4">
+            <div className="flex -space-x-2 sm:-space-x-3 md:-space-x-4">
               {testimonials.map((testimonial, index) => {
                 // Calculate distance from active index (handling wrap-around)
                 const distance = Math.min(
@@ -135,18 +137,21 @@ const Testimonials = () => {
                       <img
                         src={testimonial.avatar}
                         alt={testimonial.name}
-                        className="w-16 h-16 object-cover"
+                        className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-cover"
                       />
                     </div>
                     
                     {index === activeIndex && (
-                      <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 w-40 text-center">
-                        <p className="text-white font-medium text-sm">
-                          {testimonial.name}
-                        </p>
-                        <p className="text-blue-300 text-xs">
-                          {testimonial.role}
-                        </p>
+                      <div className="absolute -bottom-10 sm:-bottom-11 md:-bottom-12 left-1/2 transform -translate-x-1/2 w-32 sm:w-36 md:w-40 text-center">
+                        <div className="relative">
+                          <p className="text-blue-800 font-medium text-xs sm:text-sm">
+                            {testimonial.name}
+                          </p>
+                          <p className="text-gray-600 text-xs flex items-center justify-center gap-1">
+                            <MessageSquare size={10} className="sm:w-3 sm:h-3 text-blue-500" />
+                            <span className="text-xs">{testimonial.role}</span>
+                          </p>
+                        </div>
                       </div>
                     )}
                   </button>
@@ -156,10 +161,10 @@ const Testimonials = () => {
             
             <button
               onClick={handleNext}
-              className="p-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
+              className="p-2 sm:p-2.5 md:p-3 rounded-full bg-white hover:bg-blue-100 hover:text-blue-600 transition-all duration-300 shadow-md hover:shadow-lg"
               aria-label="Next testimonial"
             >
-              <ChevronRight size={24} />
+              <ChevronRight size={18} className="sm:w-5 sm:h-5 md:w-6 md:h-6 transform transition-transform hover:scale-110" />
             </button>
           </div>
         </div>

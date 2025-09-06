@@ -29,12 +29,17 @@ const BackToTop = () => {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed right-6 bottom-6 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 z-40 ${
+      className={`fixed right-6 bottom-20 bg-blue-600 text-white p-3 rounded-full shadow-xl hover:bg-blue-700 hover:shadow-2xl hover:scale-110 transition-all duration-300 z-40 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
       }`}
       aria-label={t('backToTop.label')}
     >
-      <ChevronUp size={24} />
+      <div className="relative">
+        <ChevronUp size={24} className="animate-bounce" />
+        <span className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 text-xs whitespace-nowrap font-medium">
+          {t('backToTop.label') || 'Top'}
+        </span>
+      </div>
     </button>
   );
 };

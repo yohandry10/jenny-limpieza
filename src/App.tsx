@@ -5,6 +5,7 @@ import About from './components/About';
 import Services from './components/Services';
 import WhyChooseUs from './components/WhyChooseUs';
 import WorkPlan from './components/WorkPlan';
+import Gallery from './components/Gallery';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -39,6 +40,7 @@ function App() {
               <WhyChooseUs />
               <Services />
               <WorkPlan />
+              <Gallery />
               <Testimonials />
               <Contact />
             </main>

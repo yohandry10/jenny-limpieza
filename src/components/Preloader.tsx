@@ -73,7 +73,7 @@ const Preloader = () => {
         {progress < 100 ? t('preloader.loading') : t('preloader.welcome')}
       </p>
 
-      <style jsx>{`
+      <style>{`
         @keyframes moveBackground {
           0% {
             background-position: 0 0;
