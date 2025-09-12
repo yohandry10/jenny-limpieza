@@ -1,3 +1,4 @@
+import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Shield, Clock, Wrench, Home, Building, Sparkles, HardHat, CheckCircle, ArrowRight } from 'lucide-react';
 
@@ -101,7 +102,9 @@ const Services = () => {
                 <div className="aspect-w-16 aspect-h-9 mb-3 sm:mb-4">
                   <div className="w-full h-24 sm:h-28 md:h-32 bg-blue-50 flex items-center justify-center rounded-lg">
                     <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-white shadow-md flex items-center justify-center">
-                      <div className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-blue-600">{service.icon}</div>
+                      <div className="flex items-center justify-center text-blue-600">
+                        {React.cloneElement(service.icon, { className: "w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10" })}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -127,7 +130,9 @@ const Services = () => {
             <div key={benefit.id} className="bg-white rounded-xl shadow-lg p-4 sm:p-6 md:p-8 border border-gray-100 hover:shadow-xl transition-all duration-300">
               <div className="flex items-center justify-center mb-4 sm:mb-5 md:mb-6">
                 <div className={`w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full ${benefit.bgColor} flex items-center justify-center shadow-lg`}>
-                  <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white">{benefit.icon}</div>
+                  <div className="flex items-center justify-center text-white">
+                    {React.cloneElement(benefit.icon, { className: "w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" })}
+                  </div>
                 </div>
               </div>
               <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-center text-blue-800 mb-2 sm:mb-3 md:mb-4">{benefit.title}</h3>
