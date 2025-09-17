@@ -83,6 +83,7 @@ const Footer = () => {
             <address className="not-italic text-blue-200 text-sm sm:text-base">
               <p className="mb-2">{t('contact.location')}</p>
               <p className="mb-2">+1 (438) 870-9696</p>
+              <p className="mb-2">+1 (514) 812 4712</p>
               <p className="break-all">inka_express024@gmail.com</p>
             </address>
           </div>
